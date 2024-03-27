@@ -16,7 +16,7 @@ const generateCode = async (req, res, next) => {
       codes: result.codes
     });
     return res.status(200).json({
-      message: "An 6 digit code has send to your email please check",
+      message: "An 5 digit code has send to your email please check",
       response: "success",
       email: email,
       status: 200,
