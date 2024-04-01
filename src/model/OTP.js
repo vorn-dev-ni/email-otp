@@ -7,13 +7,13 @@ const otpSchema = new mongoose.Schema({
     trim: true,
     default: () => {
       const randomDigit = [];
-      for (let i = 1; i <= 5; i++) {
-        const randomNumber = Math.floor(Math.random() * 9);
+      for (let i = 0; i < 5; i++) {
+        const randomNumber = Math.floor(Math.random() * 10) + 1; // Adjusted to generate random numbers between 1 and 10
         randomDigit.push(randomNumber.toString());
       }
       console.log(randomDigit);
       const [a, b, c, d, e] = randomDigit;
-      return Number(a + b  + c + d + e);
+      return Number(a + b + c + d + e);
     },
   },
   email: {
