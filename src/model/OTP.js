@@ -7,7 +7,7 @@ const otpSchema = new mongoose.Schema({
     trim: true,
     default: () => {
       const randomDigit = [];
-      for (let i = 0; i <= 5; i++) {
+      for (let i = 1; i <= 5; i++) {
         const randomNumber = Math.floor(Math.random() * 9);
         randomDigit.push(randomNumber.toString());
       }
